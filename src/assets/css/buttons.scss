@@ -1,0 +1,36 @@
+.btn {
+  $self: &;
+  font-family: $ff;
+  display: flex;align-items: center;justify-content: center;
+  padding: 0 35px;
+  font-size: 14px;
+  line-height: 120%;
+  height: 40px;
+  border-radius: 30px;
+  width: fit-content;
+  border: 1px solid $color-text;
+  background: transparent;
+  transition: .2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  z-index: 5;
+  &:hover {
+    opacity: .9;
+  }
+  &--large {
+    height: 50px;
+  }
+  &--secondary {
+    border-radius: 5px;
+    border: none;
+    background: $color-accent;
+  }
+  &--third {
+    border-radius: 5px;
+  }
+  &--full-width {
+    width: 100%;
+    max-width: 100%;
+  }
+}
