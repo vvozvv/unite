@@ -20,6 +20,7 @@ export default createStore({
       state.icons = payload.map((item) => ({
         id: item.id,
         url: API_URL + item.image.url,
+        name: item.name,
       }))
     },
     SET_COLORS: (state, payload) => {

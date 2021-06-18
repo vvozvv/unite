@@ -50,7 +50,7 @@
         <img
           :src="selectIcon.url"
           v-if="selectIcon.url"
-          alt=""
+          :alt="selectIcon.name"
           class="form-icon__select"
         />
         <p
@@ -78,7 +78,7 @@
               :data-id="icon.id"
               :data-url="icon.url"
               :src="icon.url"
-              alt=""
+              :alt="icon.name"
               class="form-icon__img"
             />
           </div>
@@ -235,6 +235,7 @@ export default {
           this.selectIcon = {
             id: res.data.icon.id,
             url: imageGenerate(res.data.icon.image),
+            name: res.data.icon.name,
           }
           this.selectColor = {
             id: res.data.color.id,
