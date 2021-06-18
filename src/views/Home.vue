@@ -10,7 +10,7 @@
         </div>
       </div>
       <img src="@/assets/images/preview-page.png" alt="" id="parallax-01" class="home__preview">
-      <router-link to="/register" class="text-circle">
+      <router-link to="/auth/register" class="text-circle">
         <p id="animate-text" class="text-circle__text">Регистрация Регистрация Регистрация</p>
         <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.06.94a1.5 1.5 0 00-2.12 0l-9.547 9.545a1.5 1.5 0 102.122 2.122L12 4.12l8.485 8.486a1.5 1.5 0 102.122-2.122L13.06.94zM13.5 24V2h-3v22h3z" fill="#838383"/></svg>
       </router-link>
