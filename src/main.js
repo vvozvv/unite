@@ -1,4 +1,4 @@
-import { createApp, Vue } from 'vue'
+import { createApp, nextTick } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -15,7 +15,7 @@ router.beforeEach((to, from, next) =>
   })
 )
 router.afterEach((to) => {
-  Vue.nextTick(() => {
+  nextTick(() => {
     document.title = to.meta.title || DEFAULT_TITLE
   })
 })
