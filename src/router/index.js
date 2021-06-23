@@ -18,6 +18,7 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    meta: { title: 'UNITE' },
   },
   {
     path: "/auth",
@@ -28,11 +29,13 @@ const routes = [
         path: '/auth/login',
         name: 'login',
         component: Login,
+        meta: { title: 'UNITE - Войти' },
       },
       {
         path: '/auth/register',
         name: 'register',
         component: Register,
+        meta: { title: 'UNITE - регистрация' },
       }
     ]
   },
@@ -41,6 +44,7 @@ const routes = [
     name: "dashboard",
     component: Dashboard,
     redirect: '/dashboard/main',
+    meta: { title: 'UNITE - Панель управления' },
     children: [
       {
         path: '/dashboard/main',
@@ -55,26 +59,30 @@ const routes = [
         path: '/dashboard/links',
         name: 'links',
         component: Links,
+        meta: { title: 'UNITE - Ссылки' },
       },
       {
         path: '/dashboard/links/form',
         name: 'links-form',
         component: LinksForm,
+        meta: { title: 'UNITE - Создать ссылку' },
       },
       {
         path: '/dashboard/folder/form',
         name: 'folder-form',
         component: FolderForm,
+        meta: { title: 'UNITE - Создать папку' },
       },
       {
         path: '/dashboard/folder/:id',
         name: 'folder-links',
         component: FolderLinks,
+        meta: { title: 'UNITE - Папка' },
       },
     ],
     meta: {
       requiresAuth: true,
-    }
+    },
   },
 ];
 
