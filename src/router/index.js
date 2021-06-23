@@ -44,7 +44,6 @@ const routes = [
     name: "dashboard",
     component: Dashboard,
     redirect: '/dashboard/main',
-    meta: { title: 'UNITE - Панель управления' },
     children: [
       {
         path: '/dashboard/main',
@@ -82,17 +81,18 @@ const routes = [
     ],
     meta: {
       requiresAuth: true,
+      title: 'UNITE - Панель управления',
     },
   },
-];
+]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-});
+})
 
 router.beforeEach((to, from, next) => {
-  if (to.matched.some(record => record.meta.requiresAuth)) {
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
     if (!getToken()) {
       next({
         name: 'login',
@@ -101,11 +101,12 @@ router.beforeEach((to, from, next) => {
       next()
     }
   } else if (getToken()) {
-    next({name: 'dashboard-main'}) 
+    next({
+      name: 'dashboard-main',
+    })
   } else {
     next()
   }
 })
 
-
-export default router;
+export default router
